@@ -1,0 +1,74 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #C9A84C;
+  --gold2: #EDD97A;
+  --gold3: #F7EDD4;
+  --sil: #B8C4D8;
+  --sil2: #DEE4F0;
+  --cream: #FDF0D5;
+  --ivory: #FAF4E4;
+  --mar: #4A0E1A;
+  --deep: #060310;
+  --dim: #0C071C;
+  --mid: #14103A;
+  --text: #F0E8D8;
+  --muted: #8880A8;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--deep);
+  font-family: 'Raleway', sans-serif;
+  color: var(--text);
+}
+
+/* Scrollbar */
+.sj-scroll::-webkit-scrollbar { width: 3px; }
+.sj-scroll::-webkit-scrollbar-track { background: rgba(6,3,16,.5); }
+.sj-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* Inputs */
+.sj-input {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(6,3,16,.75);
+  border: 1px solid rgba(201,168,76,.22);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  outline: none;
+  transition: border-color .22s, box-shadow .22s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.sj-input:focus {
+  border-color: rgba(201,168,76,.65);
+  box-shadow: 0 0 0 3px rgba(201,168,76,.1);
+}
+.sj-input option { background: #14103A; }
+textarea.sj-input { resize: vertical; line-height: 1.68; }
+
+/* Keyframes */
+@keyframes tw    { 0%,100%{opacity:.1;transform:scale(.7)} 50%{opacity:1;transform:scale(1.4)} }
+@keyframes sh    { 0%{background-position:-220% center} 100%{background-position:220% center} }
+@keyframes fl    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes flX   { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-8px)} }
+@keyframes pf    { 0%{transform:translateY(-5vh) rotate(0deg);opacity:0} 8%{opacity:.6} 92%{opacity:.3} 100%{transform:translateY(112vh) rotate(540deg);opacity:0} }
+@keyframes pr    { 0%{transform:scale(1);opacity:.72} 100%{transform:scale(2.8);opacity:0} }
+@keyframes gw    { 0%,100%{box-shadow:0 0 22px rgba(201,168,76,.28),0 0 44px rgba(201,168,76,.09)} 50%{box-shadow:0 0 44px rgba(201,168,76,.72),0 0 95px rgba(201,168,76,.28)} }
+@keyframes gwS   { 0%,100%{box-shadow:0 0 14px rgba(184,196,216,.16)} 50%{box-shadow:0 0 30px rgba(184,196,216,.5),0 0 60px rgba(184,196,216,.18)} }
+@keyframes ms    { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+@keyframes mr    { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(-360deg)} }
+@keyframes sd    { 0%{transform:scale(1)} 30%{transform:scale(1.36) rotate(-8deg)} 60%{transform:scale(.88) rotate(5deg)} 85%{transform:scale(1.06)} 100%{transform:scale(1)} }
+@keyframes si    { from{opacity:0;transform:scale(1.03)} to{opacity:1;transform:scale(1)} }
+@keyframes uf    { from{clip-path:inset(0 0 100% 0);opacity:0} to{clip-path:inset(0 0 0% 0);opacity:1} }
+@keyframes spin  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes film  { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes so    { 0%{opacity:1;transform:translate(0,0) scale(1)} 100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)} }
+@keyframes shimL { 0%{left:-100%} 100%{left:100%} }
+@keyframes sLoad { 0%,100%{opacity:.4} 50%{opacity:1} }
+@keyframes fu    { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
