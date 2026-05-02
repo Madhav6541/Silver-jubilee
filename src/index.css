@@ -1,74 +1,47 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --gold: #C9A84C;
-  --gold2: #EDD97A;
-  --gold3: #F7EDD4;
-  --sil: #B8C4D8;
-  --sil2: #DEE4F0;
-  --cream: #FDF0D5;
-  --ivory: #FAF4E4;
-  --mar: #4A0E1A;
-  --deep: #060310;
-  --dim: #0C071C;
-  --mid: #14103A;
-  --text: #F0E8D8;
-  --muted: #8880A8;
+  --iv0:#FEF9F0; --iv1:#FAF0DC; --iv2:#F5E4C0; --iv3:#EDD49A;
+  --r0:#4A0E17;  --r1:#6B1424;  --r2:#8B1A2B;  --r3:#A82038;
+  --g1:#B8922E;  --g2:#D4A83C;  --g3:#E8C050;  --g4:#F5D878;
+  --s1:#8A9DB0;  --s2:#B0C0D0;  --s3:#D4E0EC;
+  --td:#2A0E08;  --tm:#5C2010;  --tl:#FAF0DC;  --ts:#E8C8A0;
 }
-
 html, body, #root {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: var(--deep);
-  font-family: 'Raleway', sans-serif;
-  color: var(--text);
+  width:100%;height:100%;overflow:hidden;
+  background:var(--iv0);font-family:'Raleway',sans-serif;color:var(--td);
 }
+.sj-scroll::-webkit-scrollbar{width:3px}
+.sj-scroll::-webkit-scrollbar-track{background:var(--iv2)}
+.sj-scroll::-webkit-scrollbar-thumb{background:var(--g2);border-radius:2px}
+.sj-input{width:100%;padding:13px 16px;background:rgba(250,240,220,.88);
+  border:1px solid rgba(139,26,43,.25);border-radius:3px;
+  color:var(--td);font-family:'Cormorant Garamond',serif;font-size:1.05rem;
+  outline:none;transition:border-color .22s,box-shadow .22s;-webkit-appearance:none;appearance:none}
+.sj-input:focus{border-color:var(--r2);box-shadow:0 0 0 3px rgba(139,26,43,.1)}
+.sj-input option{background:var(--iv1);color:var(--td)}
+textarea.sj-input{resize:vertical;line-height:1.7}
 
-/* Scrollbar */
-.sj-scroll::-webkit-scrollbar { width: 3px; }
-.sj-scroll::-webkit-scrollbar-track { background: rgba(6,3,16,.5); }
-.sj-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
-
-/* Inputs */
-.sj-input {
-  width: 100%;
-  padding: 13px 16px;
-  background: rgba(6,3,16,.75);
-  border: 1px solid rgba(201,168,76,.22);
-  border-radius: 4px;
-  color: var(--text);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.05rem;
-  outline: none;
-  transition: border-color .22s, box-shadow .22s;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.sj-input:focus {
-  border-color: rgba(201,168,76,.65);
-  box-shadow: 0 0 0 3px rgba(201,168,76,.1);
-}
-.sj-input option { background: #14103A; }
-textarea.sj-input { resize: vertical; line-height: 1.68; }
-
-/* Keyframes */
-@keyframes tw    { 0%,100%{opacity:.1;transform:scale(.7)} 50%{opacity:1;transform:scale(1.4)} }
-@keyframes sh    { 0%{background-position:-220% center} 100%{background-position:220% center} }
-@keyframes fl    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-@keyframes flX   { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-8px)} }
-@keyframes pf    { 0%{transform:translateY(-5vh) rotate(0deg);opacity:0} 8%{opacity:.6} 92%{opacity:.3} 100%{transform:translateY(112vh) rotate(540deg);opacity:0} }
-@keyframes pr    { 0%{transform:scale(1);opacity:.72} 100%{transform:scale(2.8);opacity:0} }
-@keyframes gw    { 0%,100%{box-shadow:0 0 22px rgba(201,168,76,.28),0 0 44px rgba(201,168,76,.09)} 50%{box-shadow:0 0 44px rgba(201,168,76,.72),0 0 95px rgba(201,168,76,.28)} }
-@keyframes gwS   { 0%,100%{box-shadow:0 0 14px rgba(184,196,216,.16)} 50%{box-shadow:0 0 30px rgba(184,196,216,.5),0 0 60px rgba(184,196,216,.18)} }
-@keyframes ms    { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(360deg)} }
-@keyframes mr    { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(-360deg)} }
-@keyframes sd    { 0%{transform:scale(1)} 30%{transform:scale(1.36) rotate(-8deg)} 60%{transform:scale(.88) rotate(5deg)} 85%{transform:scale(1.06)} 100%{transform:scale(1)} }
-@keyframes si    { from{opacity:0;transform:scale(1.03)} to{opacity:1;transform:scale(1)} }
-@keyframes uf    { from{clip-path:inset(0 0 100% 0);opacity:0} to{clip-path:inset(0 0 0% 0);opacity:1} }
-@keyframes spin  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-@keyframes film  { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-@keyframes so    { 0%{opacity:1;transform:translate(0,0) scale(1)} 100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)} }
-@keyframes shimL { 0%{left:-100%} 100%{left:100%} }
-@keyframes sLoad { 0%,100%{opacity:.4} 50%{opacity:1} }
-@keyframes fu    { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes tw   {0%,100%{opacity:.08;transform:scale(.6)}50%{opacity:1;transform:scale(1.5)}}
+@keyframes sh   {0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes fl   {0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes flX  {0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}
+@keyframes pf   {0%{transform:translateY(-5vh) rotate(0deg);opacity:0}7%{opacity:.8}90%{opacity:.25}100%{transform:translateY(115vh) rotate(560deg);opacity:0}}
+@keyframes pr   {0%{transform:scale(1);opacity:.7}100%{transform:scale(3.2);opacity:0}}
+@keyframes fu   {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ms   {from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes mr   {from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes glow {0%,100%{box-shadow:0 0 22px rgba(212,168,60,.3),0 0 50px rgba(212,168,60,.1)}50%{box-shadow:0 0 44px rgba(212,168,60,.75),0 0 100px rgba(212,168,60,.3)}}
+@keyframes sglw {0%,100%{box-shadow:0 0 16px rgba(180,200,210,.18)}50%{box-shadow:0 0 32px rgba(180,200,210,.55)}}
+@keyframes sd   {0%{transform:scale(1)}28%{transform:scale(1.4) rotate(-8deg)}58%{transform:scale(.85) rotate(6deg)}84%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes si   {from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+@keyframes uf   {from{clip-path:inset(0 0 100% 0);opacity:0}to{clip-path:inset(0 0 0% 0);opacity:1}}
+@keyframes spin {from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes film {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes so   {0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}}
+@keyframes sL   {0%{left:-100%}100%{left:100%}}
+@keyframes brt  {0%,100%{opacity:.4}50%{opacity:1}}
+@keyframes pop  {0%{transform:scale(.8);opacity:0}60%{transform:scale(1.06)}100%{transform:scale(1);opacity:1}}
+@keyframes drift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes diyas{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes sLoad{0%,100%{opacity:.4}50%{opacity:1}}
