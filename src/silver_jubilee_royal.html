@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Mukesh & Reena — Silver Jubilee 2026</title>
+<meta name="description" content="You are cordially invited to celebrate 25 luminous years — Mukesh & Reena's Silver Jubilee, 30th June 2026, Jaipur">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Raleway:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   ROOT TOKENS — Rajput Warm Palette
+═══════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  /* Warm ivories — the parchment world */
+  --iv0: #FEF9F0;   /* near-white warm */
+  --iv1: #FAF0DC;   /* ivory */
+  --iv2: #F5E4C0;   /* parchment */
+  --iv3: #EDD49A;   /* old gold parchment */
+  /* Rajput crimson / maroon — the fort world */
+  --r0:  #4A0E17;   /* deepest maroon (gate bg) */
+  --r1:  #6B1424;   /* fort crimson */
+  --r2:  #8B1A2B;   /* Rajput crimson */
+  --r3:  #A82038;   /* bright crimson */
+  /* Gold */
+  --g1:  #B8922E;   /* antique gold */
+  --g2:  #D4A83C;   /* warm gold */
+  --g3:  #E8C050;   /* bright gold */
+  --g4:  #F5D878;   /* light gold */
+  /* Silver (25th anniversary accent) */
+  --s1:  #8A9DB0;   /* steel silver */
+  --s2:  #B0C0D0;   /* silver */
+  --s3:  #D4E0EC;   /* light silver */
+  /* Text */
+  --td:  #2A0E08;   /* dark text on ivory */
+  --tm:  #5C2010;   /* mid text */
+  --tl:  #FAF0DC;   /* light text on crimson */
+  --ts:  #E8C8A0;   /* soft light */
+}
+
+html, body { width:100%; height:100%; overflow:hidden;
+  background:var(--iv0); font-family:'Raleway',sans-serif; color:var(--td); }
+
+/* ══ KEYFRAMES ═══════════════════════════════════ */
+@keyframes tw    { 0%,100%{opacity:.08;transform:scale(.6)} 50%{opacity:1;transform:scale(1.5)} }
+@keyframes sh    { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes fl    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+@keyframes flX   { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-8px)} }
+@keyframes pf    { 0%{transform:translateY(-5vh) rotate(0deg);opacity:0} 7%{opacity:.8} 90%{opacity:.25} 100%{transform:translateY(115vh) rotate(560deg);opacity:0} }
+@keyframes pr    { 0%{transform:scale(1);opacity:.7} 100%{transform:scale(3.2);opacity:0} }
+@keyframes fu    { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes ms    { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+@keyframes mr    { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(-360deg)} }
+@keyframes glow  { 0%,100%{box-shadow:0 0 22px rgba(212,168,60,.3),0 0 50px rgba(212,168,60,.1)} 50%{box-shadow:0 0 44px rgba(212,168,60,.75),0 0 100px rgba(212,168,60,.3)} }
+@keyframes sglw  { 0%,100%{box-shadow:0 0 16px rgba(180,200,210,.18)} 50%{box-shadow:0 0 32px rgba(180,200,210,.55)} }
+@keyframes sd    { 0%{transform:scale(1)} 28%{transform:scale(1.4) rotate(-8deg)} 58%{transform:scale(.85) rotate(6deg)} 84%{transform:scale(1.08)} 100%{transform:scale(1)} }
+@keyframes si    { from{opacity:0;transform:scale(1.04)} to{opacity:1;transform:scale(1)} }
+@keyframes uf    { from{clip-path:inset(0 0 100% 0);opacity:0} to{clip-path:inset(0 0 0% 0);opacity:1} }
+@keyframes spin  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes film  { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes so    { 0%{opacity:1;transform:translate(0,0) scale(1)} 100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)} }
+@keyframes sL    { 0%{left:-100%} 100%{left:100%} }
+@keyframes brt   { 0%,100%{opacity:.4} 50%{opacity:1} }
+@keyframes pop   { 0%{transform:scale(.8);opacity:0} 60%{transform:scale(1.06)} 100%{transform:scale(1);opacity:1} }
+@keyframes drift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes diyas { 0%,100%{opacity:.55;transform:scale(1)} 50%{opacity:1;transform:scale(1.06)} }
+
+/* ══ SCROLLER ════════════════════════════════════ */
+#scroller { height:100%; overflow-y:auto; overflow-x:hidden; scroll-behavior:smooth; }
+#scroller::-webkit-scrollbar { width:3px; }
+#scroller::-webkit-scrollbar-track { background:var(--iv2); }
+#scroller::-webkit-scrollbar-thumb { background:var(--g2); border-radius:2px; }
+
+/* ══ SHIMMER TEXT ════════════════════════════════ */
+.sh-gold {
+  background: linear-gradient(120deg,var(--g1) 0%,var(--g4) 25%,var(--g3) 50%,var(--g4) 75%,var(--g1) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:sh 4s linear infinite;
+}
+.sh-sil {
+  background: linear-gradient(120deg,var(--s1) 0%,var(--s3) 25%,#E8F0F8 50%,var(--s3) 75%,var(--s1) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:sh 5s linear infinite;
+}
+
+/* ══ REVEAL ══════════════════════════════════════ */
+.rv { opacity:0; transform:translateY(30px); transition:opacity .9s ease,transform .9s ease; }
+.rv.vis { opacity:1; transform:none; }
+.rv.d1 { transition-delay:.14s; }
+.rv.d2 { transition-delay:.28s; }
+.rv.d3 { transition-delay:.42s; }
+
+/* ══ DIVIDERS ════════════════════════════════════ */
+.dv { display:flex;align-items:center;gap:14px;justify-content:center;margin:20px 0; }
+.dv::before,.dv::after { content:'';flex:1;max-width:110px;height:1px; }
+.dv-g::before,.dv-g::after { background:linear-gradient(90deg,transparent,var(--g2)); }
+.dv-g::after { background:linear-gradient(90deg,var(--g2),transparent); }
+.dv-g span { color:var(--g2); font-size:.68rem; }
+.dv-r::before,.dv-r::after { background:linear-gradient(90deg,transparent,var(--r2)); }
+.dv-r::after { background:linear-gradient(90deg,var(--r2),transparent); }
+.dv-r span { color:var(--g2); font-size:.68rem; }
+.dv-l::before,.dv-l::after { background:linear-gradient(90deg,transparent,rgba(232,192,80,.5)); }
+.dv-l::after { background:linear-gradient(90deg,rgba(232,192,80,.5),transparent); }
+.dv-l span { color:var(--g3); font-size:.68rem; }
+
+/* ══ BORDER STRIPS ═══════════════════════════════ */
+.bst,.bsb { position:absolute;left:0;right:0;height:6px; }
+.bst { top:0; } .bsb { bottom:0; }
+.bs-gold { background:repeating-linear-gradient(90deg,var(--g2) 0,var(--g2) 8px,transparent 8px,transparent 14px); opacity:.55; }
+.bs-lotus {
+  background-image: repeating-linear-gradient(90deg,var(--g2) 0,var(--g2) 1px,transparent 1px,transparent 22px),
+                    repeating-linear-gradient(90deg,transparent 8px,var(--g2) 8px,var(--g2) 9px,transparent 9px);
+  opacity:.45;
+}
+.bs-rich { background:linear-gradient(90deg,transparent,var(--g2) 20%,var(--g3) 50%,var(--g2) 80%,transparent); height:2px; opacity:.7; }
+
+/* ══ INPUT FIELDS ════════════════════════════════ */
+.inp {
+  width:100%;padding:13px 16px;
+  background:rgba(250,240,220,.85);
+  border:1px solid rgba(139,26,43,.25);border-radius:3px;
+  color:var(--td);font-family:'Cormorant Garamond',serif;font-size:1.05rem;
+  outline:none;transition:border-color .22s,box-shadow .22s;
+  -webkit-appearance:none;appearance:none;
+}
+.inp:focus { border-color:var(--r2); box-shadow:0 0 0 3px rgba(139,26,43,.1); }
+.inp option { background:var(--iv1); color:var(--td); }
+textarea.inp { resize:vertical;line-height:1.7; }
+label.lbl {
+  display:block;font-size:.47rem;letter-spacing:.38em;color:var(--r2);
+  text-transform:uppercase;margin-bottom:8px;font-family:'Cinzel',serif;
+}
+.fgrp { margin-bottom:20px; }
+
+/* ═══════════════════════════════════════════════
+   LOADER — Fort at dusk
+═══════════════════════════════════════════════ */
+#loader {
+  position:fixed;inset:0;z-index:99999;
+  background:radial-gradient(ellipse at 50% 35%,#5C1424 0%,#3D0A14 55%,#1A0308 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:opacity .75s ease;
+}
+#loader.out { opacity:0;pointer-events:none; }
+.ld-m { animation:spin 10s linear infinite;margin-bottom:26px;opacity:.75; }
+.ld-om { font-family:'Noto Serif Devanagari',serif;font-size:clamp(1.1rem,3.5vw,1.5rem);
+  color:var(--g3);letter-spacing:.08em;animation:brt 2.2s ease-in-out infinite;
+  margin-bottom:8px;text-align:center; }
+.ld-sub { font-family:'Cinzel',serif;font-size:.43rem;letter-spacing:.6em;
+  color:rgba(232,192,80,.42);text-transform:uppercase; }
+.ld-bar { width:120px;height:1px;background:rgba(212,168,60,.14);margin-top:24px;
+  overflow:hidden;border-radius:1px;position:relative; }
+.ld-bar::after { content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,var(--g3),transparent);
+  animation:sL 1.4s linear infinite; }
+
+/* ═══════════════════════════════════════════════
+   GATE — Palace entrance
+═══════════════════════════════════════════════ */
+#gate {
+  position:fixed;inset:0;z-index:9999;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(139,26,43,.4) 0%,transparent 55%),
+    radial-gradient(ellipse at 50% 90%,rgba(74,14,23,.7) 0%,transparent 60%),
+    linear-gradient(180deg,#4A0E17 0%,#3D0A14 50%,#280610 100%);
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  user-select:none;
+}
+#gate.show { display:flex; }
+.g-pre { text-align:center;margin-bottom:16px;position:relative;z-index:2;
+  font-family:'Noto Serif Devanagari',serif;font-size:clamp(.85rem,2.5vw,1.05rem);
+  color:rgba(232,192,80,.58);letter-spacing:.08em; }
+.g-title { text-align:center;margin-bottom:18px;position:relative;z-index:2;
+  font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.62em;
+  color:rgba(232,192,80,.44);text-transform:uppercase; }
+
+/* Door */
+#gFrame { width:min(390px,90vw);height:min(546px,77vh);position:relative; }
+.g-doors { display:flex;width:100%;height:100%;position:relative;z-index:2; }
+.door { width:50%;height:100%;position:relative;overflow:hidden;
+  transition:transform 1.95s cubic-bezier(.22,1,.36,1); }
+#dL { transform-origin:left center;
+  background:linear-gradient(to right,#1E0810,#160510); }
+#dR { transform-origin:right center;
+  background:linear-gradient(to left,#1E0810,#160510); }
+#dL.open { transform:perspective(1100px) rotateY(-85deg); }
+#dR.open { transform:perspective(1100px) rotateY(85deg); }
+.door-svg { position:absolute;inset:0; }
+.dknob { position:absolute;top:46%;width:18px;height:18px;border-radius:50%;
+  background:radial-gradient(circle at 33% 28%,#F5D878,#D4A83C 50%,#8B6514);
+  box-shadow:0 3px 10px rgba(0,0,0,.7),0 0 12px rgba(212,168,60,.35);
+  transform:translateY(-50%); }
+#dL .dknob { right:10px; } #dR .dknob { left:10px; }
+.g-seam { position:absolute;top:0;left:50%;width:2px;height:100%;
+  transform:translateX(-50%);
+  background:linear-gradient(to bottom,rgba(232,192,80,.85),rgba(212,168,60,.2) 70%,transparent);
+  z-index:5;pointer-events:none; }
+
+/* Lock */
+#lock { position:absolute;top:46%;left:50%;transform:translate(-50%,-50%);
+  z-index:10;cursor:grab;touch-action:none; }
+#lock.dragging { cursor:grabbing; }
+.lp1,.lp2 { position:absolute;border-radius:50%; }
+.lp1 { inset:-24px;border:1px solid rgba(212,168,60,.45);animation:pr 2.7s ease-out infinite; }
+.lp2 { inset:-13px;border:1px solid rgba(232,192,80,.4);animation:pr 2.7s ease-out 1.35s infinite; }
+#ldisc { width:78px;height:78px;border-radius:50%;
+  background:radial-gradient(circle at 33% 28%,#F5D878,#D4A83C 42%,#8B6514 76%);
+  display:flex;align-items:center;justify-content:center;
+  border:3px solid rgba(255,255,255,.18);
+  animation:glow 3s ease-in-out infinite; }
+#ldrag-prog { display:none;position:absolute;bottom:-38px;left:50%;
+  transform:translateX(-50%);width:62px;height:4px;border-radius:2px;
+  background:rgba(212,168,60,.14); }
+#ldrag-fill { height:100%;width:0%;
+  background:linear-gradient(90deg,var(--g2),var(--g3));border-radius:2px; }
+#lhint { position:absolute;top:100%;left:50%;margin-top:28px;
+  white-space:nowrap;font-size:.46rem;letter-spacing:.44em;
+  color:rgba(232,192,80,.46);text-transform:uppercase;
+  animation:flX 2.3s ease-in-out infinite;pointer-events:none; }
+
+.g-foot { margin-top:26px;text-align:center;z-index:2;position:relative; }
+
+/* ═══════════════════════════════════════════════
+   MAIN
+═══════════════════════════════════════════════ */
+#main { display:none;height:100%;animation:si .9s cubic-bezier(.16,1,.3,1); }
+#main.show { display:block; }
+#petals { position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden; }
+
+/* ═══════════════════════════════════════════════
+   §1 HERO — Warm ivory, royal feel
+═══════════════════════════════════════════════ */
+#hero {
+  min-height:100vh;display:flex;align-items:center;
+  justify-content:center;flex-direction:column;
+  text-align:center;padding:80px 24px 64px;
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse at 20% 10%,rgba(184,146,46,.12) 0%,transparent 50%),
+    radial-gradient(ellipse at 80% 90%,rgba(139,26,43,.08) 0%,transparent 50%),
+    linear-gradient(180deg,var(--iv0) 0%,var(--iv1) 50%,var(--iv2) 100%);
+}
+/* Subtle animated gradient shimmer behind hero */
+#hero::before {
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(212,168,60,.06) 0%,rgba(139,26,43,.05) 50%,rgba(212,168,60,.06) 100%);
+  background-size:300% 300%;animation:drift 12s ease infinite;pointer-events:none;
+}
+#m1 { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  animation:ms 130s linear infinite;pointer-events:none;z-index:0;opacity:.055;will-change:transform; }
+#m2 { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  animation:mr 85s linear infinite;pointer-events:none;z-index:0;opacity:.038;will-change:transform; }
+.hero-inner { position:relative;z-index:2; }
+.hero-om {
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:clamp(1.2rem,4vw,1.8rem);color:var(--r2);
+  letter-spacing:.08em;margin-bottom:16px;animation:fu .8s both;opacity:.75;
+}
+/* Top ornamental arch above "25" */
+.hero-arch-top {
+  width:min(320px,85vw);height:auto;margin:0 auto 8px;opacity:.4;display:block;
+}
+.hero-25 {
+  font-family:'Cinzel Decorative',serif;font-weight:700;
+  font-size:clamp(5.5rem,18vw,12rem);line-height:1;
+  margin-bottom:-4px;animation:fu 1s both;
+}
+.hero-yrs {
+  font-size:.55rem;letter-spacing:.8em;color:var(--r2);
+  text-transform:uppercase;margin-bottom:28px;animation:fu 1s .1s both;
+  font-family:'Cinzel',serif;
+}
+.hero-names {
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(2.8rem,9.5vw,6.5rem);color:var(--r1);
+  line-height:1.05;animation:fu 1s .2s both;
+}
+.hero-amp {
+  display:block;font-style:italic;color:var(--g2);
+  font-size:clamp(1.3rem,4.5vw,2.8rem);letter-spacing:.12em;margin:6px 0;
+}
+.hero-badge {
+  display:inline-flex;align-items:center;gap:12px;margin-top:30px;
+  padding:10px 34px;border:1px solid rgba(184,146,46,.5);border-radius:40px;
+  font-size:.52rem;letter-spacing:.52em;color:var(--r2);text-transform:uppercase;
+  background:rgba(212,168,60,.08);font-family:'Cinzel',serif;
+  animation:sglw 3.5s ease-in-out infinite;
+}
+.hero-sub {
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--tm);font-size:1.12rem;margin-top:20px;animation:fu 1s .3s both;
+}
+.hero-scroll {
+  margin-top:64px;color:rgba(184,146,46,.6);font-size:.49rem;
+  letter-spacing:.48em;text-transform:uppercase;animation:fl 2.6s ease-in-out infinite;
+  font-family:'Cinzel',serif;
+}
+/* Diya row below names */
+.diya-row {
+  display:flex;justify-content:center;gap:18px;margin:28px 0 0;
+  animation:fu 1s .35s both;
+}
+.diya { font-size:clamp(1rem,3vw,1.4rem);animation:diyas 2s ease-in-out infinite; }
+.diya:nth-child(2) { animation-delay:.3s; }
+.diya:nth-child(3) { animation-delay:.6s; }
+.diya:nth-child(4) { animation-delay:.9s; }
+.diya:nth-child(5) { animation-delay:1.2s; }
+
+/* ═══════════════════════════════════════════════
+   §1.5 SILVER BANNER — between hero and quote
+═══════════════════════════════════════════════ */
+#silver-banner {
+  background:linear-gradient(135deg,var(--r0) 0%,var(--r1) 50%,var(--r0) 100%);
+  padding:44px 24px;text-align:center;position:relative;overflow:hidden;
+}
+.sb-text {
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.3rem,4.5vw,2.2rem);color:var(--tl);line-height:1.6;
+  max-width:580px;margin:0 auto;position:relative;z-index:2;
+}
+.sb-text em { color:var(--g3);font-style:normal;font-weight:600; }
+.sb-marks { font-size:3.5rem;color:rgba(232,192,80,.15);
+  font-family:'Cormorant Garamond',serif;line-height:1;margin-bottom:-18px; }
+
+/* ═══════════════════════════════════════════════
+   §2 QUOTE — Ivory parchment
+═══════════════════════════════════════════════ */
+#quote {
+  padding:clamp(60px,10vh,120px) clamp(24px,7vw,90px);
+  background:var(--iv1);position:relative;overflow:hidden;
+}
+.q-marks { font-size:5rem;color:rgba(139,26,43,.09);
+  font-family:'Cormorant Garamond',serif;line-height:1;margin-bottom:-22px; }
+.q-text { font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.2rem,4.5vw,1.8rem);font-weight:300;color:var(--r1);line-height:1.75; }
+.q-attr { font-size:.52rem;letter-spacing:.46em;color:var(--g2);
+  text-transform:uppercase;font-family:'Cinzel',serif; }
+
+/* ═══════════════════════════════════════════════
+   §3 FILM STRIP — Crimson section
+═══════════════════════════════════════════════ */
+#film {
+  padding-top:56px;
+  background:linear-gradient(180deg,var(--r1) 0%,var(--r0) 100%);
+  border-top:1px solid rgba(212,168,60,.2);
+}
+.film-hd { text-align:center;margin-bottom:36px;padding:0 24px; }
+.film-hd-om { font-family:'Noto Serif Devanagari',serif;font-size:.95rem;
+  color:rgba(232,192,80,.5);letter-spacing:.08em;margin-bottom:6px; }
+.film-hd-ey { font-size:.5rem;letter-spacing:.54em;color:var(--g3);
+  text-transform:uppercase;margin-bottom:10px;font-family:'Cinzel',serif; }
+.film-hd-ttl { font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,5.5vw,3rem);color:var(--tl);font-weight:300; }
+.film-rail { display:flex;align-items:center;gap:14px;padding:0 8px;
+  height:24px;background:rgba(0,0,0,.25);overflow:hidden; }
+.film-hole { min-width:14px;height:10px;border-radius:2px;flex-shrink:0;
+  background:rgba(232,192,80,.14);border:1px solid rgba(232,192,80,.22); }
+.film-track { display:flex;gap:20px;width:fit-content;
+  animation:film 42s linear infinite;padding:28px 10px; }
+.film-card { min-width:192px;height:248px;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(74,14,23,.9),rgba(50,8,16,.95));
+  border:1.5px solid rgba(212,168,60,.32);border-radius:3px;
+  box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 0 1px rgba(212,168,60,.08);
+  display:flex;flex-direction:column;align-items:center;justify-content:center; }
+.film-photo { width:165px;height:175px;border-radius:2px;
+  background:linear-gradient(145deg,rgba(74,14,23,.7),rgba(50,8,16,.8));
+  border:1px solid rgba(212,168,60,.12);
+  display:flex;flex-direction:column;align-items:center;justify-content:center; }
+.film-sym { color:rgba(212,168,60,.28);font-size:2.2rem; }
+.film-ph { font-family:'Cinzel',serif;font-size:.36rem;letter-spacing:.28em;
+  color:rgba(232,192,80,.22);text-transform:uppercase;margin-top:8px; }
+.film-cap { padding:10px 8px 0;text-align:center; }
+.film-lbl { font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.9rem;color:var(--ts);line-height:1.2; }
+.film-yr { font-size:.44rem;letter-spacing:.3em;color:var(--g3);
+  text-transform:uppercase;margin-top:3px; }
+
+/* ═══════════════════════════════════════════════
+   §4 COUNTDOWN — Ivory with crimson accents
+═══════════════════════════════════════════════ */
+#countdown {
+  padding:clamp(56px,9vh,100px) clamp(20px,5vw,60px);
+  text-align:center;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,var(--iv2) 0%,var(--iv1) 100%);
+  border-top:1px solid rgba(184,146,46,.3);
+}
+.cd-bg-m { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  opacity:.05;pointer-events:none; }
+.cd-ey { font-size:.5rem;letter-spacing:.54em;color:var(--r2);
+  text-transform:uppercase;margin-bottom:8px;font-family:'Cinzel',serif; }
+.cd-ttl { font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.7rem,5vw,2.8rem);color:var(--r1);font-weight:300;margin-bottom:4px; }
+.cd-row { display:flex;gap:clamp(14px,3vw,28px);justify-content:center;
+  flex-wrap:wrap;position:relative;z-index:2; }
+.cd-box { text-align:center; }
+.cd-num {
+  font-family:'Cinzel',serif;font-weight:600;
+  font-size:clamp(1.9rem,6.5vw,3rem);color:var(--r1);
+  background:linear-gradient(135deg,var(--iv0),var(--iv2));
+  border:2px solid rgba(184,146,46,.4);border-radius:6px;
+  padding:16px 12px;min-width:74px;
+  box-shadow:0 8px 24px rgba(139,26,43,.1),0 2px 0 rgba(212,168,60,.3),
+    inset 0 1px 0 rgba(255,255,255,.8);
+}
+.cd-lbl { font-size:.48rem;letter-spacing:.32em;color:var(--r2);
+  margin-top:8px;text-transform:uppercase;font-family:'Cinzel',serif; }
+
+/* ═══════════════════════════════════════════════
+   §5 JOURNEY — Horizontal, crimson
+═══════════════════════════════════════════════ */
+#tl-wrap { height:360vh;position:relative; }
+#tl-sticky {
+  position:sticky;top:0;height:100vh;overflow:hidden;
+  display:flex;align-items:center;
+  background:linear-gradient(180deg,var(--r0) 0%,#280610 100%);
+}
+#tl-hd { position:absolute;top:32px;left:50%;transform:translateX(-50%);
+  text-align:center;z-index:3;white-space:nowrap; }
+.tl-hd-ey { font-size:.48rem;letter-spacing:.58em;color:var(--g3);
+  text-transform:uppercase;margin-bottom:6px;font-family:'Cinzel',serif; }
+.tl-hd-ttl { font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem,3vw,2.1rem);color:var(--tl);font-style:italic; }
+.tl-hd-line { width:38px;height:1px;background:var(--g2);margin:10px auto 0;opacity:.6; }
+#tl-track { display:flex;gap:44px;padding:0 88px;will-change:transform;
+  align-items:center;transition:transform .06s linear; }
+.tl-card { min-width:272px;position:relative; }
+.tl-card.odd { margin-top:48px; }
+.tl-inner {
+  padding:18px 18px 0;
+  background:linear-gradient(135deg,rgba(90,18,28,.95),rgba(60,10,18,.98));
+  border:1px solid rgba(212,168,60,.3);border-radius:3px;position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(212,168,60,.06),
+    inset 0 1px 0 rgba(212,168,60,.15);
+}
+.tl-photo { width:236px;height:192px;border-radius:2px;
+  background:linear-gradient(145deg,rgba(74,14,23,.7),rgba(50,8,16,.85));
+  border:1px solid rgba(212,168,60,.1);
+  display:flex;flex-direction:column;align-items:center;justify-content:center; }
+.tl-cap { padding:14px 6px 20px;text-align:center; }
+.tl-cap-lbl { font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.12rem;color:var(--tl); }
+.tl-cap-yr { font-size:.47rem;letter-spacing:.34em;color:var(--g3);
+  text-transform:uppercase;margin-top:4px; }
+.tl-cap-sub { font-family:'Cormorant Garamond',serif;
+  color:rgba(232,192,80,.55);font-size:.86rem;margin-top:5px;font-style:italic; }
+#tl-prog-wrap { position:absolute;bottom:62px;left:10%;right:10%;
+  height:2px;background:rgba(212,168,60,.12);border-radius:1px; }
+#tl-prog { height:100%;width:0%;
+  background:linear-gradient(90deg,var(--g2),var(--g3));
+  border-radius:1px;box-shadow:0 0 8px rgba(212,168,60,.5); }
+#tl-hint { position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:14px;
+  color:rgba(232,192,80,.28);font-size:.46rem;
+  letter-spacing:.46em;text-transform:uppercase;white-space:nowrap; }
+#tl-hint span { width:38px;height:1px;background:currentColor;display:block; }
+
+/* ═══════════════════════════════════════════════
+   §6 EVENT DETAILS — Ivory / parchment
+═══════════════════════════════════════════════ */
+#events {
+  padding:clamp(64px,10vh,120px) clamp(20px,5vw,72px);
+  background:linear-gradient(180deg,var(--iv0) 0%,var(--iv1) 100%);
+  position:relative;overflow:hidden;
+}
+.ev-eyebrow { font-family:'Cinzel',serif;font-size:.54rem;letter-spacing:.62em;
+  color:var(--g2);text-transform:uppercase;margin-bottom:10px; }
+.ev-ttl { font-family:'Cinzel Decorative',serif;font-size:clamp(1.8rem,5vw,3.2rem);
+  font-weight:700;color:var(--r1); }
+/* Silk scroll / parchment card */
+.parchment {
+  background:
+    linear-gradient(180deg,rgba(255,252,245,.98) 0%,rgba(250,240,218,.99) 100%);
+  border:1px solid rgba(184,146,46,.35);border-radius:4px;
+  padding:clamp(28px,5vw,58px);position:relative;
+  box-shadow:0 52px 120px rgba(139,26,43,.08),
+    0 2px 0 rgba(212,168,60,.25),
+    inset 0 1px 0 rgba(255,255,255,.9);
+  animation:uf 1s .15s both;
+}
+.parchment::before { /* top scroll curl */
+  content:'';position:absolute;top:-4px;left:5%;right:5%;height:8px;
+  background:linear-gradient(135deg,var(--iv3) 0%,var(--iv2) 50%,var(--iv3) 100%);
+  border-radius:4px 4px 0 0;box-shadow:0 -2px 6px rgba(139,26,43,.12);
+}
+.parchment::after { /* bottom scroll curl */
+  content:'';position:absolute;bottom:-4px;left:5%;right:5%;height:8px;
+  background:linear-gradient(135deg,var(--iv3) 0%,var(--iv2) 50%,var(--iv3) 100%);
+  border-radius:0 0 4px 4px;box-shadow:0 2px 6px rgba(139,26,43,.12);
+}
+.p-pin { position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--iv0);padding:0 16px;color:var(--g2);font-size:.9rem;line-height:1; }
+.p-inner { position:absolute;inset:14px;
+  border:1px solid rgba(139,26,43,.08);border-radius:3px;pointer-events:none; }
+.p-orn { display:flex;align-items:center;gap:12px;justify-content:center; }
+.p-orn-l { flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(139,26,43,.25)); }
+.p-orn-r { flex:1;height:1px;
+  background:linear-gradient(90deg,rgba(139,26,43,.25),transparent); }
+.ev-row { display:flex;gap:22px;padding:22px 0;text-align:left; }
+.ev-row + .ev-row { border-top:1px solid rgba(139,26,43,.1); }
+.ev-ico { min-width:50px;height:50px;border-radius:50%;
+  border:1.5px solid rgba(184,146,46,.4);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--r2);font-size:1.1rem;
+  background:radial-gradient(circle,rgba(212,168,60,.08),rgba(212,168,60,.03)); }
+.ev-ey { font-size:.47rem;letter-spacing:.4em;color:var(--g2);
+  text-transform:uppercase;margin-bottom:5px;font-family:'Cinzel',serif; }
+.ev-name { font-family:'Cinzel Decorative',serif;font-size:1.15rem;
+  color:var(--r1);margin-bottom:7px; }
+.ev-sub { font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--tm);font-size:.96rem;line-height:1.72; }
+
+/* ═══════════════════════════════════════════════
+   §6.5 BLESSING STRIP — Crimson
+═══════════════════════════════════════════════ */
+#blessing-strip {
+  background:linear-gradient(135deg,var(--r1) 0%,var(--r0) 100%);
+  padding:clamp(48px,8vh,90px) 24px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.bl-text { font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.1rem,4vw,1.7rem);color:var(--tl);
+  line-height:1.7;max-width:560px;margin:0 auto;position:relative;z-index:2; }
+
+/* ═══════════════════════════════════════════════
+   §7 RSVP — Ivory
+═══════════════════════════════════════════════ */
+#rsvp-sec {
+  padding:clamp(56px,9vh,108px) clamp(20px,5vw,68px) 80px;
+  background:linear-gradient(180deg,var(--iv1) 0%,var(--iv2) 100%);
+  position:relative;overflow:hidden;
+}
+.rsvp-ey { font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.62em;
+  color:var(--r2);text-transform:uppercase;margin-bottom:12px; }
+.rsvp-ttl { font-family:'Cinzel Decorative',serif;
+  font-size:clamp(1.9rem,5.5vw,3.4rem);font-weight:700;color:var(--r1); }
+.rsvp-sub { font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--tm);font-size:1.05rem;margin-top:8px;margin-bottom:34px; }
+.rsvp-card {
+  background:linear-gradient(180deg,var(--iv0) 0%,var(--iv1) 100%);
+  border:1.5px solid rgba(184,146,46,.4);border-radius:4px;padding:38px 32px;
+  position:relative;
+  box-shadow:0 20px 60px rgba(139,26,43,.1),
+    0 2px 0 rgba(212,168,60,.3),
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+/* Wax seal */
+.seal-btn {
+  width:100px;height:100px;border-radius:50%;
+  background:radial-gradient(circle at 35% 28%,#F5D878,#D4A83C 40%,#8B6514 74%,#6A4E0E);
+  border:3px solid rgba(255,255,255,.2);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto;position:relative;
+  box-shadow:0 8px 30px rgba(139,26,43,.3),0 0 44px rgba(212,168,60,.2);
+  animation:glow 3.2s ease-in-out infinite;transition:transform .12s;
+}
+.seal-btn:hover { transform:scale(1.06); }
+.seal-btn.stamped { animation:sd .55s cubic-bezier(.36,.07,.19,.97); }
+.seal-hint { margin-top:12px;font-size:.44rem;letter-spacing:.44em;
+  color:var(--tm);text-transform:uppercase;font-family:'Cinzel',serif;opacity:.7; }
+.rsvp-success { display:none;text-align:center;padding:26px 0;position:relative; }
+.rs-em { font-size:3rem;margin-bottom:16px;animation:pop .6s both; }
+.rs-name { font-family:'Cinzel Decorative',serif;font-size:1.6rem;
+  color:var(--r1);margin-bottom:10px;animation:fu .6s .1s both; }
+.rs-msg { font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--tm);font-size:.98rem;animation:fu .6s .2s both; }
+.rs-sign { font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--r2);font-size:.96rem; }
+.spk-layer { position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:20; }
+
+/* ═══════════════════════════════════════════════
+   FOOTER — Deep crimson
+═══════════════════════════════════════════════ */
+#footer {
+  padding:60px 24px 52px;text-align:center;
+  background:linear-gradient(0deg,#1A0308 0%,var(--r0) 100%);
+  border-top:1px solid rgba(212,168,60,.18);position:relative;
+}
+.ft-pin { position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--r0);padding:0 18px;color:var(--g2);font-size:.72rem;line-height:1; }
+.ft-love { font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:1.45rem;color:var(--ts);margin-bottom:6px; }
+.ft-names { font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(1.8rem,5.5vw,3rem); }
+.ft-shloka { font-family:'Noto Serif Devanagari',serif;
+  font-size:clamp(.85rem,2.5vw,1rem);
+  color:rgba(232,192,80,.45);letter-spacing:.08em;margin:10px 0; }
+.ft-sub { font-size:.47rem;letter-spacing:.54em;
+  color:rgba(212,168,60,.3);text-transform:uppercase;font-family:'Cinzel',serif; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ LOADER ══════════ -->
+<div id="loader">
+  <div class="ld-m"><svg id="ldM" width="114" height="114" viewBox="0 0 114 114"></svg></div>
+  <div class="ld-om">ॐ श्री गणेशाय नम:</div>
+  <div class="ld-sub">Preparing your invitation…</div>
+  <div class="ld-bar"></div>
+</div>
+
+<!-- ══════════ GATE ══════════ -->
+<div id="gate">
+  <div id="gStars" style="position:absolute;inset:0;pointer-events:none;overflow:hidden"></div>
+
+  <!-- Floating diyas on gate -->
+  <div style="position:absolute;bottom:18%;left:0;right:0;display:flex;justify-content:center;gap:clamp(20px,5vw,60px);z-index:2;pointer-events:none">
+    <div style="font-size:clamp(.9rem,2.5vw,1.4rem);animation:diyas 1.8s ease-in-out infinite">🪔</div>
+    <div style="font-size:clamp(.9rem,2.5vw,1.4rem);animation:diyas 1.8s ease-in-out .4s infinite">🪔</div>
+    <div style="font-size:clamp(.9rem,2.5vw,1.4rem);animation:diyas 1.8s ease-in-out .8s infinite">🪔</div>
+  </div>
+
+  <div class="g-pre">ॐ श्री गणेशाय नम:</div>
+  <div class="g-title">A Royal Invitation · Silver Jubilee · 2026</div>
+
+  <div id="gFrame" class="g-frame">
+    <!-- Outer Mughal arch -->
+    <svg style="position:absolute;inset:0;z-index:4;pointer-events:none;width:100%;height:100%"
+         viewBox="0 0 390 548" preserveAspectRatio="none">
+      <!-- Triple arch lines -->
+      <path d="M0,284 Q0,0 195,0 Q390,0 390,284" fill="none" stroke="#D4A83C" stroke-width="3" opacity=".82"/>
+      <path d="M10,284 Q10,14 195,14 Q380,14 380,284" fill="none" stroke="#E8C050" stroke-width=".9" opacity=".38"/>
+      <path d="M22,284 Q22,30 195,30 Q368,30 368,284" fill="none" stroke="#D4A83C" stroke-width=".4" opacity=".2"/>
+      <!-- Keystone crown -->
+      <polygon points="181,2 195,0 209,2 204,24 186,24" fill="#D4A83C" opacity=".8"/>
+      <text x="195" y="17" text-anchor="middle" font-family="serif" font-size="9.5" fill="#3A2000" opacity=".85">◆</text>
+      <circle cx="195" cy="0" r="13" fill="none" stroke="#D4A83C" stroke-width="1.3" opacity=".58"/>
+      <circle cx="195" cy="0" r="5.5" fill="#D4A83C" opacity=".55"/>
+      <circle cx="195" cy="0" r="2.2" fill="#F5D878" opacity=".9"/>
+      <!-- Rosette -->
+      <g id="archRosette"></g>
+      <!-- Bead dots -->
+      <g id="archBeads"></g>
+      <!-- Side pillars -->
+      <line x1="0"   y1="284" x2="0"   y2="548" stroke="#D4A83C" stroke-width="3" opacity=".68"/>
+      <line x1="390" y1="284" x2="390" y2="548" stroke="#D4A83C" stroke-width="3" opacity=".68"/>
+      <line x1="10"  y1="284" x2="10"  y2="536" stroke="#E8C050" stroke-width=".9" opacity=".28"/>
+      <line x1="380" y1="284" x2="380" y2="536" stroke="#E8C050" stroke-width=".9" opacity=".28"/>
+      <!-- Base sill -->
+      <rect x="0" y="542" width="390" height="6" fill="#D4A83C" opacity=".6" rx="1"/>
+      <rect x="0" y="543" width="390" height="3" fill="#F5D878" opacity=".25" rx="1"/>
+      <!-- Pillar jaali pattern -->
+      <g id="pillarJaali"></g>
+    </svg>
+
+    <div class="g-doors">
+      <div class="door" id="dL">
+        <svg width="100%" height="100%" viewBox="0 0 200 610"
+             preserveAspectRatio="xMidYMid slice" class="door-svg" id="doorLSvg"></svg>
+        <div class="dknob"></div>
+      </div>
+      <div class="door" id="dR">
+        <svg width="100%" height="100%" viewBox="0 0 200 610"
+             preserveAspectRatio="xMidYMid slice" class="door-svg" id="doorRSvg"></svg>
+        <div class="dknob"></div>
+      </div>
+      <div class="g-seam"></div>
+
+      <!-- Drag lock -->
+      <div id="lock">
+        <div class="lp1"></div><div class="lp2"></div>
+        <div id="ldisc">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <rect x="6" y="16" width="22" height="14" rx="4" fill="#3A2000" opacity=".88"/>
+            <path d="M10 16V12A7 7 0 0 1 24 12V16" fill="none" stroke="#3A2000" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="17" cy="22" r="3" fill="#9B7010"/>
+            <line x1="17" y1="22" x2="17" y2="26" stroke="#9B7010" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div id="ldrag-prog"><div id="ldrag-fill"></div></div>
+        <div id="lhint">↓ Slide to Enter ↓</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-foot">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.9rem,3vw,1.15rem);color:rgba(232,200,160,.46)">Mukesh &amp; Reena</div>
+    <div style="font-size:.43rem;letter-spacing:.56em;color:rgba(212,168,60,.3);text-transform:uppercase;margin-top:6px;font-family:'Cinzel',serif">Silver Jubilee · 2001 – 2026</div>
+  </div>
+</div>
+
+<!-- ══════════ MAIN ══════════ -->
+<div id="main">
+  <div id="petals"></div>
+  <div id="scroller">
+
+    <!-- §1 HERO (Warm ivory) -->
+    <section id="hero">
+      <div id="m1"><svg id="m1s" width="680" height="680" viewBox="0 0 680 680"></svg></div>
+      <div id="m2"><svg id="m2s" width="360" height="360" viewBox="0 0 360 360"></svg></div>
+      <div id="hStars" style="position:absolute;inset:0;pointer-events:none;overflow:hidden"></div>
+
+      <!-- Top ornamental arch SVG inside hero -->
+      <svg class="hero-arch-top" viewBox="0 0 340 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q0,0 170,0 Q340,0 340,80" stroke="#B8922E" stroke-width="1.5" opacity=".35" fill="none"/>
+        <path d="M10,80 Q10,10 170,10 Q330,10 330,80" stroke="#D4A83C" stroke-width=".6" opacity=".2" fill="none"/>
+        <g id="heroArchDots"></g>
+        <circle cx="170" cy="0" r="8" fill="none" stroke="#B8922E" stroke-width="1" opacity=".35"/>
+        <circle cx="170" cy="0" r="3.5" fill="#D4A83C" opacity=".4"/>
+        <!-- Arch side lotuses -->
+        <g transform="rotate(-20,0,80)"><ellipse cx="0" cy="68" rx="3" ry="8" fill="none" stroke="#B8922E" stroke-width=".6" opacity=".3"/></g>
+        <g transform="rotate(20,340,80)"><ellipse cx="340" cy="68" rx="3" ry="8" fill="none" stroke="#B8922E" stroke-width=".6" opacity=".3"/></g>
+      </svg>
+
+      <div class="hero-inner">
+        <div class="hero-om">ॐ</div>
+        <div class="hero-25 sh-gold">25</div>
+        <div class="hero-yrs">Years of Togetherness</div>
+        <div class="dv dv-r"><span>✦</span></div>
+        <div class="hero-names">
+          Mukesh<span class="hero-amp">&amp;</span>Reena
+        </div>
+        <div class="diya-row">
+          <span class="diya">🪔</span><span class="diya">✦</span>
+          <span class="diya">🌸</span><span class="diya">✦</span><span class="diya">🪔</span>
+        </div>
+        <div class="hero-badge">✦ Silver Jubilee · 2001 – 2026 ✦</div>
+        <div class="hero-sub">cordially invite you to celebrate twenty-five luminous years</div>
+        <div style="margin-top:14px;font-family:'Cinzel',serif;font-size:.52rem;
+          letter-spacing:.55em;color:var(--r2);text-transform:uppercase;opacity:.75">
+          30 June 2026 · Jaipur, Rajasthan
+        </div>
+        <div class="hero-scroll">Scroll to Explore ↓</div>
+      </div>
+    </section>
+
+    <!-- §1.5 SILVER BANNER -->
+    <section id="silver-banner">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--g3) 30%,var(--g2) 50%,var(--g3) 70%,transparent);opacity:.7"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--g3) 30%,var(--g2) 50%,var(--g3) 70%,transparent);opacity:.7"></div>
+      <!-- Corner mandalas on crimson -->
+      <div style="position:absolute;top:-40px;left:-40px;opacity:.07;pointer-events:none"><svg id="sbm1" width="200" height="200" viewBox="0 0 200 200"></svg></div>
+      <div style="position:absolute;top:-40px;right:-40px;opacity:.07;pointer-events:none"><svg id="sbm2" width="200" height="200" viewBox="0 0 200 200"></svg></div>
+      <div class="rv" style="max-width:560px;margin:0 auto;position:relative;z-index:2;text-align:center">
+        <div class="sb-marks">"</div>
+        <p class="sb-text">
+          Twenty-five years of choosing each other — every single morning, without exception.<br>
+          That is not just a love story. That is a <em>masterpiece</em>.
+        </p>
+        <div class="dv dv-l" style="margin-top:24px;margin-bottom:0"><span>◆</span></div>
+        <div style="font-size:.52rem;letter-spacing:.46em;color:rgba(232,192,80,.6);
+          text-transform:uppercase;font-family:'Cinzel',serif;margin-top:16px">
+          ✦ A Silver Thread Woven in Gold ✦
+        </div>
+      </div>
+    </section>
+
+    <!-- §2 QUOTE (Ivory parchment) -->
+    <section id="quote">
+      <div class="bst bs-gold"></div><div class="bsb bs-gold"></div>
+      <div style="position:absolute;top:-50px;left:-50px;opacity:.06;pointer-events:none"><svg id="qm1" width="220" height="220" viewBox="0 0 220 220"></svg></div>
+      <div style="position:absolute;top:-50px;right:-50px;opacity:.06;pointer-events:none"><svg id="qm2" width="220" height="220" viewBox="0 0 220 220"></svg></div>
+      <div style="position:absolute;bottom:-50px;right:-50px;opacity:.06;pointer-events:none"><svg id="qm3" width="220" height="220" viewBox="0 0 220 220"></svg></div>
+      <div style="max-width:620px;margin:0 auto;text-align:center;position:relative;z-index:2" class="rv">
+        <div class="q-marks">"</div>
+        <p class="q-text">
+          A marriage of twenty-five years is not luck — it is devotion, patience, laughter, and love — renewed every day, in every season, through every storm.
+        </p>
+        <div class="dv dv-r" style="margin:26px 0"><span>◆</span></div>
+        <div class="q-attr">✦ Silver Jubilee · The Golden Couple ✦</div>
+      </div>
+    </section>
+
+    <!-- §3 FILM STRIP (Crimson) -->
+    <section id="film">
+      <div class="film-hd rv">
+        <div class="film-hd-om">ॐ</div>
+        <div class="film-hd-ey">Twenty-Five Years of Memories</div>
+        <div class="film-hd-ttl">A Life <em style="color:var(--g3)">Beautiful</em></div>
+        <div class="dv dv-l"><span>✦</span></div>
+      </div>
+      <div style="position:relative">
+        <div class="film-rail" id="fr1"></div>
+        <div style="overflow:hidden">
+          <div class="film-track" id="filmTrack"></div>
+        </div>
+        <div class="film-rail" id="fr2"></div>
+      </div>
+      <div style="height:56px"></div>
+    </section>
+
+    <!-- §4 COUNTDOWN (Ivory) -->
+    <section id="countdown">
+      <div class="bst bs-lotus"></div><div class="bsb bs-lotus"></div>
+      <div class="cd-bg-m"><svg id="cdM" width="520" height="520" viewBox="0 0 520 520"></svg></div>
+      <div class="rv" style="position:relative;z-index:2">
+        <div class="cd-ey">The Celebration Awaits</div>
+        <div class="cd-ttl">Counting Every Heartbeat</div>
+        <div class="dv dv-r"><span>✦</span></div>
+        <div class="cd-row">
+          <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-lbl">Days</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Hours</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">Minutes</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">Seconds</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- §5 JOURNEY (Horizontal, crimson) -->
+    <div id="tl-wrap">
+      <div id="tl-sticky">
+        <div id="tl-hd">
+          <div class="tl-hd-ey">Our Journey Together</div>
+          <div class="tl-hd-ttl">The Story So Far</div>
+          <div class="tl-hd-line"></div>
+        </div>
+        <div id="tl-track"></div>
+        <div id="tl-prog-wrap"><div id="tl-prog"></div></div>
+        <div id="tl-hint"><span></span>Scroll to journey through time<span></span></div>
+      </div>
+    </div>
+
+    <!-- §6 EVENT DETAILS (Ivory) -->
+    <section id="events">
+      <div class="bst bs-rich"></div><div class="bsb bs-rich"></div>
+      <div style="position:absolute;top:-55px;left:-55px;opacity:.055;pointer-events:none"><svg id="em1" width="260" height="260" viewBox="0 0 260 260"></svg></div>
+      <div style="position:absolute;top:-55px;right:-55px;opacity:.055;pointer-events:none"><svg id="em2" width="260" height="260" viewBox="0 0 260 260"></svg></div>
+      <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:2">
+        <div class="rv">
+          <div class="ev-eyebrow">✦ The Royal Decree ✦</div>
+          <div class="ev-ttl">Celebration Details</div>
+          <div class="dv dv-r" style="margin:20px 0 32px"><span>◆</span></div>
+        </div>
+        <div class="rv d1">
+          <div class="parchment">
+            <div class="p-pin">◆</div>
+            <div class="p-inner"></div>
+            <!-- Top ornament row -->
+            <div class="p-orn" style="margin-bottom:30px">
+              <div class="p-orn-l"></div>
+              <span style="color:var(--g2);font-size:.58rem;letter-spacing:.32em">✦ ✦ ✦</span>
+              <div class="p-orn-r"></div>
+            </div>
+            <div id="evtRows"></div>
+            <!-- Bottom ornament row -->
+            <div class="p-orn" style="margin-top:30px">
+              <div class="p-orn-l"></div>
+              <span style="color:var(--g2);font-size:.58rem;letter-spacing:.32em">✦</span>
+              <div class="p-orn-r"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- §6.5 BLESSING STRIP (Crimson) -->
+    <section id="blessing-strip">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--g3) 30%,var(--g2) 50%,var(--g3) 70%,transparent);opacity:.7"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--g3) 30%,var(--g2) 50%,var(--g3) 70%,transparent);opacity:.7"></div>
+      <div style="position:absolute;bottom:-42px;left:-42px;opacity:.07;pointer-events:none"><svg id="blm1" width="200" height="200" viewBox="0 0 200 200"></svg></div>
+      <div style="position:absolute;bottom:-42px;right:-42px;opacity:.07;pointer-events:none"><svg id="blm2" width="200" height="200" viewBox="0 0 200 200"></svg></div>
+      <div class="rv" style="position:relative;z-index:2;text-align:center">
+        <div style="font-family:'Noto Serif Devanagari',serif;font-size:clamp(.9rem,2.5vw,1.1rem);
+          color:rgba(232,192,80,.48);letter-spacing:.08em;margin-bottom:14px">
+          सर्वे भवन्तु सुखिनः
+        </div>
+        <p class="bl-text">
+          "The best thing to hold onto in life is each other." — Twenty-five years, and every single day, a choice renewed with love.
+        </p>
+        <div class="dv dv-l" style="margin-top:22px;margin-bottom:0"><span>✦ ✦ ✦</span></div>
+      </div>
+    </section>
+
+    <!-- §7 RSVP (Ivory) -->
+    <section id="rsvp-sec">
+      <div class="bst bs-gold"></div>
+      <!-- Corner mandalas on ivory -->
+      <div style="position:absolute;top:-44px;left:-44px;opacity:.055;pointer-events:none"><svg id="rm1" width="215" height="215" viewBox="0 0 215 215"></svg></div>
+      <div style="position:absolute;top:-44px;right:-44px;opacity:.055;pointer-events:none"><svg id="rm2" width="215" height="215" viewBox="0 0 215 215"></svg></div>
+      <div style="position:absolute;bottom:-44px;left:-44px;opacity:.055;pointer-events:none"><svg id="rm3" width="215" height="215" viewBox="0 0 215 215"></svg></div>
+      <div style="position:absolute;bottom:-44px;right:-44px;opacity:.055;pointer-events:none"><svg id="rm4" width="215" height="215" viewBox="0 0 215 215"></svg></div>
+
+      <div style="max-width:520px;margin:0 auto;text-align:center;position:relative;z-index:2">
+        <div class="rv">
+          <div class="rsvp-ey">Your Presence is Requested</div>
+          <div class="rsvp-ttl">RSVP</div>
+          <div class="rsvp-sub">Kindly grace us with your response by 15th June 2026</div>
+        </div>
+        <div class="rv d1">
+          <div class="rsvp-card">
+            <!-- Gold corner rivets -->
+            <div style="position:absolute;top:-10px;left:-10px"><svg width="22" height="22"><circle cx="0" cy="0" r="8" fill="none" stroke="#B8922E" stroke-width="1.2" opacity=".6"/><circle cx="0" cy="0" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+            <div style="position:absolute;top:-10px;right:-10px"><svg width="22" height="22"><circle cx="22" cy="0" r="8" fill="none" stroke="#B8922E" stroke-width="1.2" opacity=".6"/><circle cx="22" cy="0" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+            <div style="position:absolute;bottom:-10px;left:-10px"><svg width="22" height="22"><circle cx="0" cy="22" r="8" fill="none" stroke="#B8922E" stroke-width="1.2" opacity=".6"/><circle cx="0" cy="22" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+            <div style="position:absolute;bottom:-10px;right:-10px"><svg width="22" height="22"><circle cx="22" cy="22" r="8" fill="none" stroke="#B8922E" stroke-width="1.2" opacity=".6"/><circle cx="22" cy="22" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+
+            <!-- Form -->
+            <div id="rsvpForm" style="text-align:left">
+              <div class="fgrp">
+                <label class="lbl">Full Name</label>
+                <input class="inp" type="text" id="rName" placeholder="Your full name">
+              </div>
+              <div class="fgrp">
+                <label class="lbl">Will You Join Us?</label>
+                <select class="inp" id="rAttend">
+                  <option value="">Please select…</option>
+                  <option value="yes">With Bells On — I Will Be There!</option>
+                  <option value="no">Celebrating You from Afar</option>
+                </select>
+              </div>
+              <div class="fgrp">
+                <label class="lbl">Number of Guests</label>
+                <input class="inp" type="number" id="rGuests" min="1" max="15" placeholder="Including yourself" value="1">
+              </div>
+              <div class="fgrp">
+                <label class="lbl">Leave a Blessing for the Couple</label>
+                <textarea class="inp" id="rBlessing" rows="4" placeholder="Your warm wishes & blessings…"></textarea>
+              </div>
+              <div style="text-align:center;position:relative;margin-top:6px">
+                <div class="spk-layer" id="spkA"></div>
+                <button class="seal-btn" id="sealBtn" onclick="submitRsvp()">
+                  <svg width="58" height="58" viewBox="0 0 58 58" fill="none">
+                    <circle cx="29" cy="29" r="25" stroke="#3A2000" stroke-width="1" opacity=".55"/>
+                    <circle cx="29" cy="29" r="20" stroke="#3A2000" stroke-width=".7" opacity=".35"/>
+                    <line x1="29" y1="9"   x2="29" y2="4"   stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="44.4" y1="13.6" x2="48.4" y2="9.6"   stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="49"  y1="29"  x2="54"  y2="29"  stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="44.4" y1="44.4" x2="48.4" y2="48.4" stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="29"  y1="49"  x2="29"  y2="54"  stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="13.6" y1="44.4" x2="9.6"  y2="48.4" stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="9"   y1="29"  x2="4"   y2="29"  stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <line x1="13.6" y1="13.6" x2="9.6"  y2="9.6"  stroke="#3A2000" stroke-width="1" opacity=".38"/>
+                    <text x="29" y="27"   text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="8" fill="#3A2000" opacity=".9" font-style="italic">M &amp; R</text>
+                    <text x="29" y="36.5" text-anchor="middle" font-family="serif" font-size="5.8" fill="#3A2000" opacity=".6">2001 – 2026</text>
+                  </svg>
+                </button>
+                <div class="seal-hint">Press the Seal to Confirm</div>
+              </div>
+            </div>
+
+            <!-- Success -->
+            <div class="rsvp-success" id="rsvpDone">
+              <div class="spk-layer" id="spkB"></div>
+              <div class="rs-em">🎊</div>
+              <div class="rs-name" id="rsName"></div>
+              <div class="rs-msg" style="color:var(--tm)">Your response has been received.<br>We cannot wait to celebrate with you.</div>
+              <div class="dv dv-r" style="margin:22px 0"><span>✦</span></div>
+              <div class="rs-sign" style="color:var(--r2)">With all our love, Mukesh &amp; Reena</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="ft-pin">◆</div>
+      <div style="opacity:.09;display:flex;justify-content:center;margin-bottom:32px"><svg id="ftM" width="128" height="128" viewBox="0 0 128 128"></svg></div>
+      <div class="ft-love">With all our love,</div>
+      <div class="ft-names sh-gold">Mukesh &amp; Reena</div>
+      <div class="dv dv-l" style="margin:22px 0 18px"><span>✦ ✦ ✦</span></div>
+      <div class="ft-shloka">ॐ तत् सत् · सर्वे भवन्तु सुखिनः · सर्वे सन्तु निरामयाः</div>
+      <div class="ft-sub" style="margin-top:12px">Silver Jubilee · 2001 – 2026 · Jaipur, Rajasthan</div>
+    </footer>
+  </div>
+</div>
+
+<script>
+/* ════════════════════════════════════════
+   MANDALA BUILDER
+════════════════════════════════════════ */
+function mandala(svg,sz,c1,c2){
+  const cx=sz/2,r=sz/2; let h='';
+  [.94,.80,.66,.53,.41,.30,.19,.10].forEach((f,i)=>{
+    h+=`<circle cx="${cx}" cy="${cx}" r="${(r*f).toFixed(1)}" fill="none" stroke="${i%2?c2:c1}" stroke-width="${i===0?1.3:.45}" opacity="${(.6-i*.05).toFixed(2)}"/>`;
+  });
+  for(let i=0;i<24;i++) h+=`<g transform="rotate(${i*15},${cx},${cx})"><path d="M${cx},${cx} C${cx+r*.065},${cx-r*.18} ${cx+r*.075},${cx-r*.54} ${cx},${cx-r*.64} C${cx-r*.075},${cx-r*.54} ${cx-r*.065},${cx-r*.18} ${cx},${cx}" fill="${c1}" opacity=".12"/></g>`;
+  for(let i=0;i<12;i++) h+=`<g transform="rotate(${i*30},${cx},${cx})"><ellipse cx="${cx}" cy="${(cx-r*.36).toFixed(1)}" rx="${(r*.055).toFixed(1)}" ry="${(r*.125).toFixed(1)}" fill="${c2}" opacity=".28"/></g>`;
+  for(let i=0;i<8;i++)  h+=`<g transform="rotate(${i*45},${cx},${cx})"><ellipse cx="${cx}" cy="${(cx-r*.21).toFixed(1)}" rx="${(r*.038).toFixed(1)}" ry="${(r*.085).toFixed(1)}" fill="${c1}" opacity=".56"/></g>`;
+  for(let i=0;i<36;i++){const a=(i*Math.PI*2)/36,rr=r*.89;h+=`<circle cx="${(cx+rr*Math.sin(a)).toFixed(1)}" cy="${(cx-rr*Math.cos(a)).toFixed(1)}" r="${i%3===0?2.2:.9}" fill="${c1}" opacity="${i%3===0?.62:.21}"/>`;}
+  for(let i=0;i<8;i++) h+=`<line x1="${cx}" y1="${cx}" x2="${(cx+r*.85*Math.sin(i*Math.PI/4)).toFixed(1)}" y2="${(cx-r*.85*Math.cos(i*Math.PI/4)).toFixed(1)}" stroke="${c2}" stroke-width=".4" opacity=".18"/>`;
+  for(let i=0;i<6;i++) h+=`<g transform="rotate(${i*60},${cx},${cx})"><path d="M${cx},${(cx-r*.15).toFixed(1)} Q${(cx+r*.065).toFixed(1)},${(cx-r*.09).toFixed(1)} ${cx},${cx} Q${(cx-r*.065).toFixed(1)},${(cx-r*.09).toFixed(1)} ${cx},${(cx-r*.15).toFixed(1)}" fill="${c1}" opacity=".5"/></g>`;
+  h+=`<circle cx="${cx}" cy="${cx}" r="${(r*.05).toFixed(1)}" fill="${c1}" opacity=".85"/>`;
+  h+=`<circle cx="${cx}" cy="${cx}" r="${(r*.023).toFixed(1)}" fill="white" opacity=".9"/>`;
+  svg.innerHTML=h;
+}
+
+/* ════════════════════════════════════════
+   DOOR BUILDER — Rajasthani jharokha
+════════════════════════════════════════ */
+function buildDoor(svg,isL){
+  const G='#D4A83C',G2='#E8C050',S='#C8A060'; let h='';
+  // Triple border
+  h+=`<rect x="3" y="3" width="194" height="604" fill="none" stroke="${G}" stroke-width="1.8" opacity=".72"/>`;
+  h+=`<rect x="9" y="9" width="182" height="592" fill="none" stroke="${G2}" stroke-width=".6" opacity=".28"/>`;
+  h+=`<rect x="16" y="16" width="168" height="578" fill="none" stroke="${G}" stroke-width=".3" opacity=".14"/>`;
+  // Mughal arch
+  h+=`<path d="M18,297 Q18,26 100,26 Q182,26 182,297" fill="rgba(212,168,60,.02)" stroke="${G}" stroke-width="1.4" opacity=".7"/>`;
+  h+=`<path d="M26,297 Q26,38 100,38 Q174,38 174,297" fill="none" stroke="${G2}" stroke-width=".6" opacity=".22"/>`;
+  // Keystone rosette
+  for(let i=0;i<14;i++) h+=`<g transform="rotate(${i*25.7},100,26)"><ellipse cx="100" cy="48" rx="4" ry="11" fill="none" stroke="${G}" stroke-width=".65" opacity=".38"/></g>`;
+  h+=`<circle cx="100" cy="26" r="12" fill="none" stroke="${G}" stroke-width="1.1" opacity=".55"/>`;
+  h+=`<circle cx="100" cy="26" r="5.5" fill="${G}" opacity=".38"/>`;
+  h+=`<circle cx="100" cy="26" r="2.5" fill="${G2}" opacity=".8"/>`;
+  // Arch beads
+  for(let i=0;i<20;i++){const t=i/19,ang=Math.PI*t,rr=82,x=100-rr*Math.cos(Math.PI-ang),y=297-rr*Math.sin(ang)*(271/82);if(y<28)continue;h+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i%4===0?3.5:1.6}" fill="${G}" opacity="${i%4===0?.74:.38}"/>`;}
+  // Jaali diamond lattice
+  for(let row=0;row<6;row++) for(let col=0;col<5;col++){const cx_=38+col*24,cy_=94+row*34;h+=`<path d="M${cx_},${cy_-12} L${cx_+12},${cy_} L${cx_},${cy_+12} L${cx_-12},${cy_} Z" fill="none" stroke="${G}" stroke-width=".4" opacity=".22"/>`;h+=`<circle cx="${cx_}" cy="${cy_}" r="1.4" fill="${G}" opacity=".24"/>`;}
+  // Corner rivets (elaborate)
+  [[14,14],[186,14],[14,596],[186,596]].forEach(([x,y])=>{
+    h+=`<circle cx="${x}" cy="${y}" r="9" fill="${G}" opacity=".5"/>`;
+    h+=`<circle cx="${x}" cy="${y}" r="14" fill="none" stroke="${G}" stroke-width=".9" opacity=".34"/>`;
+    h+=`<circle cx="${x}" cy="${y}" r="20" fill="none" stroke="${G2}" stroke-width=".5" opacity=".2"/>`;
+    h+=`<circle cx="${x}" cy="${y}" r="26" fill="none" stroke="${G}" stroke-width=".3" opacity=".1"/>`;
+    h+=`<circle cx="${x}" cy="${y}" r="4" fill="${G2}" opacity=".75"/>`;
+  });
+  // Mid divider
+  h+=`<line x1="16" y1="299" x2="184" y2="299" stroke="${G}" stroke-width=".8" opacity=".44"/>`;
+  h+=`<line x1="22" y1="302" x2="178" y2="302" stroke="${G2}" stroke-width=".4" opacity=".2"/>`;
+  // Lower panel with detailed rosette
+  h+=`<rect x="28" y="310" width="144" height="194" fill="none" stroke="${G}" stroke-width="1" opacity=".44" rx="2"/>`;
+  h+=`<rect x="36" y="318" width="128" height="178" fill="none" stroke="${G2}" stroke-width=".4" opacity=".2"/>`;
+  for(let i=0;i<12;i++) h+=`<g transform="rotate(${i*30},100,400)"><ellipse cx="100" cy="373" rx="9" ry="23" fill="none" stroke="${G}" stroke-width=".65" opacity=".34"/></g>`;
+  for(let i=0;i<8;i++)  h+=`<g transform="rotate(${i*45},100,400)"><ellipse cx="100" cy="378" rx="5" ry="13" fill="none" stroke="${G2}" stroke-width=".4" opacity=".24"/></g>`;
+  h+=`<circle cx="100" cy="400" r="17" fill="none" stroke="${G}" stroke-width="1.1" opacity=".52"/>`;
+  h+=`<circle cx="100" cy="400" r="9" fill="none" stroke="${G}" stroke-width=".6" opacity=".36"/>`;
+  h+=`<circle cx="100" cy="400" r="4.5" fill="${G}" opacity=".32"/>`;
+  h+=`<circle cx="100" cy="400" r="2" fill="${G2}" opacity=".6"/>`;
+  // Bottom strip
+  h+=`<rect x="28" y="518" width="144" height="78" fill="none" stroke="${G}" stroke-width=".8" opacity=".36"/>`;
+  for(let i=0;i<5;i++) h+=`<circle cx="${52+i*24}" cy="557" r="2.5" fill="${G}" opacity=".3"/>`;
+  [520,530,540,550,560,570,580,588].forEach(y=>h+=`<line x1="36" y1="${y}" x2="164" y2="${y}" stroke="${G}" stroke-width=".3" opacity=".15"/>`);
+  // Side ornament dots
+  const sx=isL?182:18;
+  for(let i=0;i<11;i++){h+=`<circle cx="${sx}" cy="${98+i*44}" r="2.5" fill="${G}" opacity=".3"/>`;h+=`<circle cx="${sx}" cy="${98+i*44}" r="5.5" fill="none" stroke="${G}" stroke-width=".5" opacity=".17"/>`;}
+  svg.innerHTML=h;
+}
+
+/* ════════════════════════════════════════
+   STARS
+════════════════════════════════════════ */
+function buildStars(el,n){
+  let h='';
+  for(let i=0;i<n;i++){
+    const sz=(Math.random()*1.5+.4).toFixed(1),
+      t=(Math.random()*100).toFixed(1),l=(Math.random()*100).toFixed(1),
+      d=(Math.random()*3+2).toFixed(1),dl=(Math.random()*5).toFixed(1);
+    h+=`<div style="position:absolute;width:${sz}px;height:${sz}px;background:rgba(232,192,80,.7);border-radius:50%;top:${t}%;left:${l}%;animation:tw ${d}s ${dl}s ease-in-out infinite"></div>`;
+  }
+  el.innerHTML=h;
+}
+
+/* ════════════════════════════════════════
+   PETALS
+════════════════════════════════════════ */
+function buildPetals(){
+  const chars=['🌸','🌺','✿','❀','🌼','✾'],el=document.getElementById('petals');
+  let h='';
+  for(let i=0;i<20;i++){
+    const l=(Math.random()*95).toFixed(1),d=(10+Math.random()*10).toFixed(1),
+      dl=(Math.random()*16).toFixed(1),sz=(0.55+Math.random()*0.6).toFixed(1);
+    h+=`<div style="position:absolute;left:${l}%;top:0;font-size:${sz}rem;opacity:0;animation:pf ${d}s ${dl}s linear infinite">${chars[i%6]}</div>`;
+  }
+  el.innerHTML=h;
+}
+
+/* ════════════════════════════════════════
+   FILM STRIP
+════════════════════════════════════════ */
+const FRAMES=[
+  {y:'2001',l:'A Night to Remember',s:'🌙'},
+  {y:'2006',l:'Adventures Together',s:'✦'},
+  {y:'2010',l:'Growing Roots',s:'🌺'},
+  {y:'2015',l:'Mahabalipuram',s:'🌊'},
+  {y:'2018',l:'By the Shore',s:'✿'},
+  {y:'2022',l:'Golden Rooftop',s:'🪔'},
+  {y:'2026',l:'Silver Jubilee',s:'⭐'},
+];
+function buildFilm(){
+  const track=document.getElementById('filmTrack');
+  const all=[...FRAMES,...FRAMES];
+  track.innerHTML=all.map(f=>`
+    <div class="film-card">
+      <div class="film-photo">
+        <div class="film-sym">${f.s}</div>
+        <div class="film-ph">Photo Placeholder</div>
+      </div>
+      <div class="film-cap">
+        <div class="film-lbl">${f.l}</div>
+        <div class="film-yr">${f.y}</div>
+      </div>
+    </div>`).join('');
+  const holes=Array.from({length:46},()=>'<div class="film-hole"></div>').join('');
+  document.getElementById('fr1').innerHTML=holes;
+  document.getElementById('fr2').innerHTML=holes;
+}
+
+/* ════════════════════════════════════════
+   JOURNEY CARDS
+════════════════════════════════════════ */
+const JOURNEY=[
+  {y:'2001',l:'The Beginning',s:'A lifetime woven from one perfect day'},
+  {y:'2008',l:'Growing Roots',s:'Every season bloomed with quiet purpose'},
+  {y:'2015',l:'South India Tales',s:'Temples, tides, and tandem laughter'},
+  {y:'2026',l:'Silver Jubilee',s:'Twenty-five years — all of it gold'},
+];
+function buildJourney(){
+  const track=document.getElementById('tl-track');
+  track.innerHTML=JOURNEY.map((j,idx)=>`
+    <div class="tl-card${idx%2===1?' odd':''}">
+      <div class="tl-inner">
+        <div style="position:absolute;top:-10px;left:-10px"><svg width="22" height="22"><circle cx="0" cy="0" r="8" fill="none" stroke="#D4A83C" stroke-width="1" opacity=".65"/><circle cx="0" cy="0" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+        <div style="position:absolute;top:-10px;right:-10px"><svg width="22" height="22"><circle cx="22" cy="0" r="8" fill="none" stroke="#D4A83C" stroke-width="1" opacity=".65"/><circle cx="22" cy="0" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+        <div style="position:absolute;bottom:-10px;left:-10px"><svg width="22" height="22"><circle cx="0" cy="22" r="8" fill="none" stroke="#D4A83C" stroke-width="1" opacity=".65"/><circle cx="0" cy="22" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+        <div style="position:absolute;bottom:-10px;right:-10px"><svg width="22" height="22"><circle cx="22" cy="22" r="8" fill="none" stroke="#D4A83C" stroke-width="1" opacity=".65"/><circle cx="22" cy="22" r="3.5" fill="#D4A83C" opacity=".55"/></svg></div>
+        <div class="tl-photo">
+          <div style="font-size:2.2rem;color:rgba(212,168,60,.28)">✦</div>
+          <div style="font-family:'Cinzel',serif;font-size:.36rem;letter-spacing:.28em;color:rgba(232,192,80,.24);text-transform:uppercase;margin-top:6px">Your Photo</div>
+        </div>
+        <div class="tl-cap">
+          <div class="tl-cap-lbl">${j.l}</div>
+          <div class="tl-cap-yr">${j.y}</div>
+          <div class="tl-cap-sub">${j.s}</div>
+        </div>
+      </div>
+    </div>`).join('')+'<div style="min-width:66px"></div>';
+}
+
+/* ════════════════════════════════════════
+   EVENT ROWS
+════════════════════════════════════════ */
+const EVENTS=[
+  {i:'◈',e:'Date & Time',t:'30th June, 2026',s:'The festivities begin at 6:00 PM · Dinner and celebrations to follow through the evening'},
+  {i:'◉',e:'Venue',t:'Jaipur, Rajasthan',s:'The Pink City — full address and directions shared with confirmed guests'},
+  {i:'✦',e:'Dress Code',t:'Silver & Gold Elegance',s:'Sarees · Lehengas · Sherwanis · Or your finest festive attire — all warmly welcome'},
+  {i:'♡',e:'A Heartfelt Note',t:'Your Presence is Our Gift',s:'Your love and blessings are the greatest gift we could receive as we mark this milestone'},
+];
+function buildEvents(){
+  document.getElementById('evtRows').innerHTML=EVENTS.map(ev=>`
+    <div class="ev-row">
+      <div class="ev-ico">${ev.i}</div>
+      <div style="flex:1">
+        <div class="ev-ey">${ev.e}</div>
+        <div class="ev-name">${ev.t}</div>
+        <div class="ev-sub">${ev.s}</div>
+      </div>
+    </div>`).join('');
+}
+
+/* ════════════════════════════════════════
+   SPARKLES
+════════════════════════════════════════ */
+function sparks(container){
+  const cols=['#D4A83C','#E8C050','#F5D878','#FFFFFF','#C8A060','#FFB6C1'];
+  let h='';
+  for(let i=0;i<62;i++){
+    const x=(Math.random()*320-160).toFixed(0),y=(-(Math.random()*230+30)).toFixed(0),
+      sz=(Math.random()*10+3).toFixed(0),col=cols[Math.floor(Math.random()*cols.length)],
+      dl=(Math.random()*.6).toFixed(2),isCirc=i%3===0;
+    h+=`<div style="position:absolute;top:50%;left:50%;width:${sz}px;height:${sz}px;border-radius:${isCirc?'50%':'3px'};background:${col};--tx:${x}px;--ty:${y}px;animation:so 1.2s ${dl}s cubic-bezier(.22,1,.36,1) both;opacity:0"></div>`;
+  }
+  container.innerHTML=h;setTimeout(()=>container.innerHTML='',3000);
+}
+
+/* ════════════════════════════════════════
+   COUNTDOWN
+════════════════════════════════════════ */
+function startCountdown(){
+  const T=new Date('2026-06-30T18:00:00'),pad=n=>String(Math.max(0,Math.floor(n))).padStart(2,'0');
+  function tick(){
+    const d=T-new Date();
+    ['cd-d','cd-h','cd-m','cd-s'].forEach((id,j)=>{
+      const el=document.getElementById(id);
+      if(el)el.textContent=pad([d/86400000,(d%86400000)/3600000,(d%3600000)/60000,(d%60000)/1000][j]);
+    });
+  }
+  tick();setInterval(tick,1000);
+}
+
+/* ════════════════════════════════════════
+   HORIZONTAL SCROLL
+════════════════════════════════════════ */
+function initHScroll(){
+  const sc=document.getElementById('scroller'),
+    sec=document.getElementById('tl-wrap'),
+    track=document.getElementById('tl-track'),
+    prog=document.getElementById('tl-prog');
+  sc.addEventListener('scroll',()=>{
+    const r=sec.getBoundingClientRect(),range=sec.offsetHeight-sc.clientHeight;
+    const p=Math.max(0,Math.min(1,-r.top/range));
+    const maxOff=Math.max(0,track.scrollWidth-sc.clientWidth+80);
+    track.style.transform=`translateX(${-p*maxOff}px)`;
+    if(prog)prog.style.width=`${p*100}%`;
+  },{passive:true});
+}
+
+/* ════════════════════════════════════════
+   PARALLAX MANDALAS
+════════════════════════════════════════ */
+function initParallax(){
+  const m1=document.getElementById('m1'),m2=document.getElementById('m2');
+  window.addEventListener('mousemove',e=>{
+    const x=(e.clientX/window.innerWidth-.5)*36,y=(e.clientY/window.innerHeight-.5)*36;
+    if(m1)m1.style.transform=`translate(calc(-50% + ${x}px),calc(-50% + ${y}px))`;
+    if(m2)m2.style.transform=`translate(calc(-50% + ${-x*.55}px),calc(-50% + ${-y*.55}px))`;
+  });
+}
+
+/* ════════════════════════════════════════
+   SCROLL REVEAL
+════════════════════════════════════════ */
+function initReveal(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});
+  },{threshold:.1});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════════════════════════════════════
+   DRAG LOCK
+════════════════════════════════════════ */
+let isDrag=false,dragSY=0,dragCY=0;
+const THR=96;
+function initDrag(){
+  const lock=document.getElementById('lock'),
+    prog=document.getElementById('ldrag-prog'),fill=document.getElementById('ldrag-fill'),
+    hint=document.getElementById('lhint'),disc=document.getElementById('ldisc'),
+    p1=lock.querySelector('.lp1'),p2=lock.querySelector('.lp2');
+  function start(y){isDrag=true;dragSY=y;lock.classList.add('dragging');
+    disc.style.animation='none';prog.style.display='block';hint.style.display='none';
+    p1.style.display='none';p2.style.display='none';}
+  function move(y){if(!isDrag)return;
+    dragCY=Math.min(Math.max(0,y-dragSY),THR+34);
+    lock.style.transform=`translate(-50%,calc(-50% + ${dragCY}px))`;
+    fill.style.width=`${Math.min(100,(dragCY/THR)*100)}%`;
+    if(dragCY>=THR){isDrag=false;openGate();}}
+  function end(){if(!isDrag)return;isDrag=false;lock.classList.remove('dragging');
+    if(dragCY<THR){lock.style.transform='translate(-50%,-50%)';
+      lock.style.transition='transform .46s cubic-bezier(.34,1.56,.64,1)';
+      setTimeout(()=>lock.style.transition='',500);
+      prog.style.display='none';hint.style.display='';
+      disc.style.animation='glow 3s ease-in-out infinite';
+      p1.style.display='';p2.style.display='';}dragCY=0;}
+  lock.addEventListener('mousedown',e=>start(e.clientY));
+  window.addEventListener('mousemove',e=>{if(isDrag)move(e.clientY);});
+  window.addEventListener('mouseup',end);
+  lock.addEventListener('touchstart',e=>{e.preventDefault();start(e.touches[0].clientY);},{passive:false});
+  window.addEventListener('touchmove',e=>{if(isDrag){e.preventDefault();move(e.touches[0].clientY);}},{passive:false});
+  window.addEventListener('touchend',end);
+}
+
+/* ════════════════════════════════════════
+   OPEN GATE
+════════════════════════════════════════ */
+function openGate(){
+  document.getElementById('dL').classList.add('open');
+  document.getElementById('dR').classList.add('open');
+  setTimeout(()=>{
+    document.getElementById('gate').style.display='none';
+    const main=document.getElementById('main');main.classList.add('show');
+    buildPetals();initReveal();initHScroll();initParallax();startCountdown();
+  },2300);
+}
+
+/* ════════════════════════════════════════
+   RSVP
+════════════════════════════════════════ */
+function submitRsvp(){
+  const name=document.getElementById('rName').value.trim();
+  const attend=document.getElementById('rAttend').value;
+  if(!name||!attend){alert('Please fill in your name and attendance.');return;}
+  const btn=document.getElementById('sealBtn');
+  btn.classList.add('stamped');
+  sparks(document.getElementById('spkA'));
+  setTimeout(()=>{
+    btn.classList.remove('stamped');
+    document.getElementById('rsvpForm').style.display='none';
+    const done=document.getElementById('rsvpDone');done.style.display='block';
+    document.getElementById('rsName').textContent=`Thank you, ${name}!`;
+    sparks(document.getElementById('spkB'));
+  },700);
+}
+
+/* ════════════════════════════════════════
+   BOOT
+════════════════════════════════════════ */
+(function boot(){
+  // Build mandalas — gold on ivory sections, gold on crimson sections
+  mandala(document.getElementById('ldM'),  114, '#D4A83C','#E8C050');
+  mandala(document.getElementById('m1s'),  680, '#B8922E','#D4A83C');
+  mandala(document.getElementById('m2s'),  360, '#D4A83C','#B8922E');
+  mandala(document.getElementById('cdM'),  520, '#8B1A2B','#D4A83C');
+  mandala(document.getElementById('ftM'),  128, '#D4A83C','#E8C050');
+  // Ivory sections: crimson mandala
+  ['qm1','qm2','qm3'].forEach(id=>mandala(document.getElementById(id),220,'#8B1A2B','#D4A83C'));
+  ['em1','em2'].forEach(id=>mandala(document.getElementById(id),260,'#8B1A2B','#D4A83C'));
+  ['rm1','rm2','rm3','rm4'].forEach(id=>mandala(document.getElementById(id),215,'#8B1A2B','#D4A83C'));
+  // Crimson sections: gold mandala
+  ['sbm1','sbm2','blm1','blm2'].forEach(id=>mandala(document.getElementById(id),200,'#E8C050','#D4A83C'));
+
+  // Hero arch dots
+  let ad='';
+  for(let i=0;i<18;i++){const t=i/17,ang=Math.PI*t,rr=166,x=170-rr*Math.cos(Math.PI-ang),y=80-rr*Math.sin(ang)*(80/166);if(y<2)continue;ad+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i%4===0?3.5:1.8}" fill="#B8922E" opacity="${i%4===0?.5:.25}"/>`;}
+  const haEl=document.getElementById('heroArchDots');if(haEl)haEl.innerHTML=ad;
+
+  // Arch rosette on gate
+  let r='';for(let i=0;i<16;i++)r+=`<g transform="rotate(${i*22.5},195,0)"><ellipse cx="195" cy="26" rx="4.5" ry="13" fill="none" stroke="#D4A83C" stroke-width=".7" opacity=".32"/></g>`;
+  document.getElementById('archRosette').innerHTML=r;
+  // Arch beads on gate
+  let b='';for(let i=0;i<24;i++){const t=i/23,ang=Math.PI*t,rr=188,x=195-rr*Math.cos(Math.PI-ang),y=284-rr*Math.sin(ang)*(284/188);if(y<12)continue;b+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i%4===0?4.8:2.2}" fill="#D4A83C" opacity="${i%4===0?.8:.42}"/>`;}
+  document.getElementById('archBeads').innerHTML=b;
+  // Pillar jaali
+  let j='';for(let i=0;i<8;i++){j+=`<path d="M${i*10},300 L${i*10+5},310 L${i*10},320 L${i*10-5},310 Z" fill="none" stroke="#D4A83C" stroke-width=".35" opacity=".18"/>`;j+=`<path d="M${390-i*10},300 L${390-i*10+5},310 L${390-i*10},320 L${390-i*10-5},310 Z" fill="none" stroke="#D4A83C" stroke-width=".35" opacity=".18"/>`;}
+  document.getElementById('pillarJaali').innerHTML=j;
+
+  // Doors
+  buildDoor(document.getElementById('doorLSvg'),true);
+  buildDoor(document.getElementById('doorRSvg'),false);
+
+  // Stars (warm gold tint for gate)
+  buildStars(document.getElementById('gStars'),60);
+  buildStars(document.getElementById('hStars'),30); // fewer on ivory hero
+
+  // Content
+  buildFilm();buildJourney();buildEvents();
+
+  // Loader → Gate
+  setTimeout(()=>{
+    const L=document.getElementById('loader');L.classList.add('out');
+    setTimeout(()=>{L.style.display='none';document.getElementById('gate').classList.add('show');initDrag();},750);
+  },2600);
+})();
+</script>
+</body>
+</html>
